@@ -1,0 +1,64 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+.main-container{
+    width: 100vw;
+    height: 70vh;
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+}
+.right img{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    transition: .5s;
+    
+}
+.right img:hover{
+    border-radius: 0;
+}
+.footer{
+    width: 100vw;
+    height: auto;
+    top: 70%;
+    position: absolute;
+    margin: 0;
+}
+
+.bottom i{
+    font-size: 1.5rem;
+}
+/* clip-path: polygon(50% 0%, 100% 35%, 100% 100%, 50% 100%, 0% 100%, 0% 35%); */
+@media screen and (max-width: 1000px){
+    .footer{
+        top: 100%;
+    }
+}
+.name{
+    position: absolute;
+    left: -100%;
+    animation: animateName 1s ease forwards;
+}
+@keyframes animateName{
+    from{
+        left: -100%;
+    }
+    to{
+        left: 0;
+        position: relative;
+    }
+}
+@media (max-width: 991px) {
+    .left {
+        order: 2;
+    }
+    .right {
+        order: 1;
+    }
+}
